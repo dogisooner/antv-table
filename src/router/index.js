@@ -8,7 +8,7 @@ const routes = [
     path: "/",
     name: "table",
     component: () =>
-      import(/* webpackChunkName: "table" */ "../components/table/TableDemo")
+      import(/* webpackChunkName: "table" */ "../components/table/TableDemo2")
   }
 ];
 
