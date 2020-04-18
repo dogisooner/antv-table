@@ -177,6 +177,70 @@ export default {
       footerData: []
     };
   },
+  created() {
+    this.tableData = [
+      {
+        rank: "正高级",
+        total: 0,
+        below34: 1,
+        above35: 2,
+        above45: 6,
+        above60: 0,
+        doctor: 0,
+        overseas: 0,
+        practice: 0,
+        foreign: 0
+      },
+      {
+        rank: "副高级",
+        total: 0,
+        below34: 0,
+        above35: 5,
+        above45: 0,
+        above60: 0,
+        doctor: 0,
+        overseas: 0,
+        practice: 0,
+        foreign: 0
+      },
+      {
+        rank: "中级",
+        total: 0,
+        below34: 0,
+        above35: 5,
+        above45: 0,
+        above60: 0,
+        doctor: 0,
+        overseas: 0,
+        practice: 0,
+        foreign: 0
+      },
+      {
+        rank: "初级",
+        total: 0,
+        below34: 0,
+        above35: 0,
+        above45: 0,
+        above60: 0,
+        doctor: 0,
+        overseas: 0,
+        practice: 0,
+        foreign: 0
+      },
+      {
+        rank: "无",
+        total: 0,
+        below34: 0,
+        above35: 0,
+        above45: 0,
+        above60: 0,
+        doctor: 0,
+        overseas: 0,
+        practice: 0,
+        foreign: 0
+      }
+    ];
+  },
   computed: {
     countRatio() {
       let stuNumber =
@@ -184,7 +248,7 @@ export default {
         Number(this.$data["tableData2"][1]["categoryNumber"]);
       let teacherNumber = this.countAllAmount(this.$data["tableData"], "total");
       if (teacherNumber != 0) {
-        return (stuNumber / teacherNumber).toFixed(2);
+        return stuNumber / teacherNumber;
       } else {
         return null;
       }
